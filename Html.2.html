@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Peace Petal</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8fc;
+            color: #403746;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #76558a;
+            text-align: center;
+            font-size: 45px;
+        }
+
+        h2 {
+            color: #76558a;
+        }
+
+        section {
+            background-color: #e8d5f2;
+            padding: 25px;
+            margin: 25px auto;
+            max-width: 800px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px #d8c5df;
+        }
+
+        .tagline {
+            text-align: center;
+            font-size: 18px;
+            color: #76558a;
+        }
+
+        button {
+            background-color: #76558a;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #a477b8;
+        }
+
+        #welcome {
+            text-align: center;
+            padding-top: 150px;
+        }
+
+        #main-site {
+            display: none;
+        }
+
+        .breathe-message {
+            text-align: center;
+            font-size: 18px;
+            color: #76558a;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Welcome Page -->
+
+    <div id="welcome">
+
+        <h1>🌸 Peace Petal</h1>
+
+        <p class="tagline">
+            A little space for calm, care and awareness.
+        </p>
+
+        <button onclick="enterSite()">
+            Enter Peace Petal
+        </button>
+
+    </div>
+
+
+    <!-- Main Website -->
+
+    <div id="main-site">
+
+        <h1>Peace Petal</h1>
+
+        <p class="tagline">
+            A little space for calm, care and awareness.
+        </p>
+
+
+        <section>
+
+            <h2>About Peace Petal</h2>
+
+            <p>
+                Peace Petal is a website created to spread awareness
+                about stress management and healthy self-care.
+            </p>
+
+            <button onclick="showSelfCare()">
+                Go to Self-Care Tips
+            </button>
+
+        </section>
+
+
+        <section>
+
+            <h2>Understanding Stress</h2>
+
+            <p>
+                Stress can happen when we face challenging situations
+                or feel under pressure.
+            </p>
+
+        </section>
+
+
+        <section id="tips" style="display: none;">
+
+            <h2>Self-Care Tips</h2>
+
+            <ul>
+                <li>Take regular breaks.</li>
+                <li>Get enough rest.</li>
+                <li>Organise your work.</li>
+                <li>Spend time doing things you enjoy.</li>
+            </ul>
+
+        </section>
+
+
+        <section>
+
+            <h2>Stop &amp; Breathe</h2>
+
+            <p>
+                Pause for a moment and take a slow, comfortable breath.
+            </p>
+
+            <button onclick="stopAndBreathe()">
+                Stop &amp; Breathe
+            </button>
+
+            <p id="breathe" class="breathe-message"></p>
+
+        </section>
+
+
+        <section>
+
+            <h2>Calm Corner</h2>
+
+            <p>
+                Take a moment to slow down, breathe and relax.
+            </p>
+
+            <button onclick="showTip()">
+                Give me a tip
+            </button>
+
+            <p id="tip"></p>
+
+        </section>
+
+    </div>
+
+
+    <script>
+
+        function enterSite() {
+
+            document.getElementById("welcome").style.display = "none";
+
+            document.getElementById("main-site").style.display = "block";
+
+        }
+
+
+        function showSelfCare() {
+
+            document.getElementById("tips").style.display = "block";
+
+            document.getElementById("tips").scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+
+        function stopAndBreathe() {
+
+            document.getElementById("breathe").innerHTML =
+                "Breathe in slowly... hold for a moment... and breathe out gently. 🌸";
+
+        }
+
+
+        function showTip() {
+
+            document.getElementById("tip").innerHTML =
+                "Take a short break and do something you enjoy.";
+
+        }
+
+    </script>
+
+</body>
+</html>
